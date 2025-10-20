@@ -14,3 +14,6 @@ pip install -r requirements.txt
 ```sh
 uvicorn main:app --reload
 ```
+
+# Login UI
+<img width="665" height="680" alt="image" src="https://github.com/user-attachments/assets/64e121ee-0736-4cad-81bb-618e9673c734" />
