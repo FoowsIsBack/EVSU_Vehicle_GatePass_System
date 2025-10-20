@@ -20,7 +20,10 @@
                     <h3 class="email">Email Address</h3>
                     <p><input type="text" name="nm" placeholder="your.email@evsu.edu.ph"></p>
                     <h3 class="pass">Password</h3>
-                    <p><input type="password" name="pwd" placeholder="Enter Password"></p>
+                    <div class="password-container">
+                        <input type="password" id="pwd" name="pwd" placeholder="Enter Password">
+                        <img src="/static/icons/closePass.png" id="togglePassword" alt="Show Password">
+                    </div>
                 </form>
                 <div class="checker">
                     <label>
@@ -40,6 +43,7 @@
         </div>
     </div>
 
+    <script src="/static/javascript/showpass.js"></script>
     
 </body>
 </html>
