@@ -16,4 +16,4 @@ uvicorn main:app --reload
 ```
 
 # Login UI
-<img width="1918" height="931" alt="image" src="https://github.com/user-attachments/assets/cd1dea80-dcfe-4fef-8680-dc972f8a3d88" />
+<img width="1460" height="906" alt="image" src="https://github.com/user-attachments/assets/125f67ed-e6c8-423b-a5df-0a7a5338bc5e" />
