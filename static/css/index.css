@@ -34,7 +34,7 @@ h3.cacar{
 
 h3.email{
     color: #A30000;
-    margin-bottom: -2%;
+    margin-bottom: 1%;
 }
 
 h3.pass{
@@ -213,4 +213,25 @@ p{
 
 .password-container img:hover{
   opacity: 1;
+}
+
+.already{
+    padding-top: 10px;
+    text-align: center;
+}
+
+.already a{
+    color: blue;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.already a:hover{
+    text-decoration: underline;
+}
+
+input.error {
+    border: 2px solid red !important;
+    background-color: #fff5f5;
+    transition: border 0.3s ease;
 }

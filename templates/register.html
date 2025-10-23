@@ -2,52 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/index.css">
     <link rel="shortcut icon" href="/static/icons/person.png" type="image/x-icon">
     <title>Register Account</title>
 </head>
 <body>
-    
     <div class="main">
         <div class="container1">
             <div class="pic">
                 <img src="/static/icons/person.png" alt="logo">
             </div>
-                <h3 class="cacar">Create Your Parking Account</h3>
+            <h3 class="cacar">Create Your Parking Account</h3>
+
             <div class="container2">
-                <form action="/submit" method="post">
+                <form id="registerForm">
                     <h3 class="email">Email Address</h3>
-                    <p><input type="text" name="nm" placeholder="your.email@evsu.edu.ph"></p>
+                    <input type="email" id="email" name="nm" placeholder="your.email@evsu.edu.ph"
+                        pattern=".+@evsu\.edu\.ph$" required>
+
                     <h3 class="pass">Password</h3>
                     <div class="password-container">
-                        <input type="password" id="pwd2" name="pwd2" placeholder="Enter New Password">
+                        <input type="password" id="pwd2" name="pwd2" placeholder="Enter New Password" required>
                         <img src="/static/icons/closePass.png" id="togglePassword2" alt="Show Password">
                     </div>
+
                     <h3 class="pass">Confirm Password</h3>
                     <div class="password-container">
-                        <input type="password" id="pwd3" name="pwd3" placeholder="Confirm Password">
+                        <input type="password" id="pwd3" name="pwd3" placeholder="Confirm Password" required>
                         <img src="/static/icons/closePass.png" id="togglePassword3" alt="Show Password">
                     </div>
-                </form>
+
                     <div class="term">
-                    <label>
-                        <input type="checkbox" name="agree" id="agree">
-                        <span>
-                        I agree to the 
-                        <a href="/terms" class="pass">Terms and Conditions</a> 
-                        and 
-                        <a href="/privacy" class="pass">Privacy Policy</a>
-                        </span>
-                    </label>
+                        <label>
+                            <input type="checkbox" name="agree" id="agree" required>
+                            <span>
+                                I agree to the 
+                                <a href="/terms" class="pass">Terms and Conditions</a> 
+                                and 
+                                <a href="/privacy" class="pass">Privacy Policy</a>
+                            </span>
+                        </label>
                     </div>
-                <div class="clicker">
-                    <button class="signin" type="button">Create Account</button>
+
+                    <div class="clicker">
+                        <button class="signin" type="submit">Create Account</button>
+                    </div>
+                </form>
+
+                <div class="already">
+                    <a href="/login">Already have an account?</a>
                 </div>
-            </div> 
+            </div>
         </div>
     </div>
 
     <script src="/static/javascript/showpass.js"></script>
+    <script src="/static/javascript/validateEmail.js"></script>
+    <script src="/static/javascript/register.js"></script>
 </body>
 </html>
