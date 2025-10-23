@@ -14,7 +14,7 @@ pip install -r requirements.txt
 ```sh
 uvicorn main:app --reload
 ```
-## MYSQL
+## MySQL
 ```sql
 CREATE DATABASE evsu_vehicle_gatepass;
 
