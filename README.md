@@ -14,7 +14,18 @@ pip install -r requirements.txt
 ```sh
 uvicorn main:app --reload
 ```
+## MYSQL
+```sql
+CREATE DATABASE evsu_vehicle_gatepass;
 
+USE evsu_vehicle_gatepass;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+```
 # Login UI
 <img width="1460" height="906" alt="image" src="https://github.com/user-attachments/assets/125f67ed-e6c8-423b-a5df-0a7a5338bc5e" />
 
