@@ -76,10 +76,61 @@ async def login_auth(
 
     return RedirectResponse(url="/dashboard", status_code=303)
 
-@app.get("/dashboard", response_class=HTMLResponse)
-async def dashboard(request: Request):
-    return templates.TemplateResponse("dashboard.html", {"request": request})
-
 @app.get("/forgot", response_class=HTMLResponse)
 async def forgot(request: Request):
     return templates.TemplateResponse("forgot_pass.html", {"request": request})
+
+@app.post("/forgot_auth")
+async def forgot_auth(request: Request, nm: str = Form(...)):
+    connection = get_db_connection()
+    cursor = connection.cursor()
+    cursor.execute("SELECT * FROM users WHERE email=%s", (nm,))
+    user = cursor.fetchone()
+    connection.close()
+
+    if user:
+        return RedirectResponse(url=f"/reset_pass?email={nm}", status_code=303)
+    else:
+        return templates.TemplateResponse(
+            "forgot_pass.html",
+            {"request": request, "error": "Email not found. Please try again."}
+        )
+
+@app.get("/reset_pass", response_class=HTMLResponse)
+async def reset_pass(request: Request):
+    email = request.query_params.get("email")
+    return templates.TemplateResponse("reset_pass.html", {"request": request, "email": email})
+
+@app.post("/reset_auth")
+async def reset_auth(
+    request: Request,
+    pwd1: str = Form(...),
+    pwd2: str = Form(...),
+):
+    email = request.query_params.get("email")
+
+    if not email:
+        return templates.TemplateResponse(
+            "reset_pass.html",
+            {"request": request, "error": "Missing email information."}
+        )
+
+    if pwd1 != pwd2:
+        return templates.TemplateResponse(
+            "reset_pass.html",
+            {"request": request, "error": "Passwords do not match.", "email": email}
+        )
+
+    hashed_pwd = hashlib.sha256(pwd1.encode()).hexdigest()[:15]
+
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("UPDATE users SET password=%s WHERE email=%s", (hashed_pwd, email))
+    conn.commit()
+    conn.close()
+
+    return RedirectResponse(url="/", status_code=303)
+
+@app.get("/dashboard", response_class=HTMLResponse)
+async def dashboard(request: Request):
+    return templates.TemplateResponse("dashboard.html", {"request": request})
