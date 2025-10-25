@@ -31,3 +31,9 @@ CREATE TABLE users (
 
 # Register UI
 <img width="1460" height="906" alt="image" src="https://github.com/user-attachments/assets/e72f72d6-d208-45d8-8059-b13ba71ed3ff" />
+
+# Forgot Password UI
+<img width="1460" height="906" alt="image" src="https://github.com/user-attachments/assets/6bec2f05-ef80-46f7-92d4-3ac6033ddc07" />
+
+# Reset Password UI
+<img width="1460" height="906" alt="image" src="https://github.com/user-attachments/assets/5c3927a6-27ac-48df-9da0-f8fa209113be" />
