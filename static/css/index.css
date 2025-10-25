@@ -29,7 +29,7 @@ h3{
 h3.cacar{
     color: white;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 h3.email{
@@ -73,7 +73,7 @@ input::placeholder{
     align-items: center;
     gap: 50%;
     font-size: 14px;
-    margin-top: 5%;
+    margin-top: 2%;
     white-space: nowrap;
     margin-bottom: 3%;
 }
@@ -85,6 +85,8 @@ input::placeholder{
     cursor: pointer;
     font-size: larger;
     color: rgb(65, 62, 62);
+    margin-top: 1px;
+    margin-bottom: -5px;
 }
 
 .term input[type="checkbox"] {
@@ -134,6 +136,12 @@ input::placeholder{
     padding-left: 5%;
 }
 
+.container3{
+    background-color: white;
+    padding: 10px;
+    padding-left: 5%;
+}
+
 .main{
     width: 100%;
     max-width: 600px;
@@ -159,6 +167,10 @@ button.signin{
     border: 1px solid #A30000;
 }
 
+button.signin:hover{
+    background-color: #700202;
+}
+
 .register{
     display: flex;
     align-items: center;
@@ -167,6 +179,7 @@ button.signin{
     cursor: pointer;
     font-size: larger;
     color: rgb(65, 62, 62);
+    margin-bottom: -5px;
 }
 
 p{
@@ -218,6 +231,7 @@ p{
 .already{
     padding-top: 10px;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .already a{
@@ -234,4 +248,70 @@ input.error {
     border: 2px solid red !important;
     background-color: #fff5f5;
     transition: border 0.3s ease;
+}
+
+hr{
+    width: 95%;
+    margin-bottom: 0%;
+}
+
+p{
+    cursor: default;
+}
+
+.forgot_search{
+    font-size: larger;
+    color: black;
+    margin-bottom: 10px;
+}
+
+h3.find{
+    color: white;
+    font-size: 150%;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    line-height: 1.2;
+}
+
+.clicker_cancel{
+    padding: 10px;
+    display: flex;
+    justify-content: right;
+    margin-top: 10px;
+}
+
+button.cancel_1{
+    background-color: #234769;
+    border-radius: 10px;
+    width: 20%;
+    max-width: 550px;
+    font-size: larger;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid grey;
+    margin-right: 10px;
+}
+
+button.cancel_1:hover{
+    background-color: #1b3650;
+}
+
+button.cancel_2{
+    background-color: #A30000;
+    border-radius: 10px;
+    width: 20%;
+    max-width: 550px;
+    font-size: larger;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid #A30000;
+}
+
+button.cancel_2:hover{
+    background-color: #700202;
 }

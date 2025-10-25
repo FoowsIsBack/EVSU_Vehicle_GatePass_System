@@ -79,3 +79,7 @@ async def login_auth(
 @app.get("/dashboard", response_class=HTMLResponse)
 async def dashboard(request: Request):
     return templates.TemplateResponse("dashboard.html", {"request": request})
+
+@app.get("/forgot", response_class=HTMLResponse)
+async def forgot(request: Request):
+    return templates.TemplateResponse("forgot_pass.html", {"request": request})
