@@ -30,4 +30,4 @@ CREATE TABLE users (
 <img width="1460" height="906" alt="image" src="https://github.com/user-attachments/assets/17e7edb7-111c-4221-bc7f-f280303831d8" />
 
 # Register UI
-<img width="1460" height="906" alt="image" src="https://github.com/user-attachments/assets/c081849a-09ff-423e-a27e-b202ad38a4e3" />
+<img width="1460" height="906" alt="image" src="https://github.com/user-attachments/assets/25dc6eeb-b870-44be-9aa6-7844be3bff43" />
