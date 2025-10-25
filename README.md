@@ -27,7 +27,7 @@ CREATE TABLE users (
 );
 ```
 # Login UI
-<img width="1460" height="906" alt="image" src="https://github.com/user-attachments/assets/125f67ed-e6c8-423b-a5df-0a7a5338bc5e" />
+<img width="1460" height="906" alt="image" src="https://github.com/user-attachments/assets/988e2fc3-d895-4662-84be-b3fbcf419273" />
 
 # Register UI
-<img width="1460" height="906" alt="image" src="https://github.com/user-attachments/assets/238ec10d-2d9c-4cde-aa2c-5f09977b2954" />
+<img width="1460" height="906" alt="image" src="https://github.com/user-attachments/assets/75d6b2f8-43a6-4c5e-bbd4-200d4cd4a4e4" />
