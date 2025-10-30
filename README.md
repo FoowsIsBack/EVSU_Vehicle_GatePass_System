@@ -48,5 +48,5 @@ CREATE TABLE users (
 # User Forgot Acc UI
 <img width="936" height="371" alt="image" src="https://github.com/user-attachments/assets/8d67a7ca-56ef-4e12-8665-21294566160d" />
 
-# User reset Password UI
-<img width="687" height="604" alt="image" src="https://github.com/user-attachments/assets/66863370-3d79-4093-ac99-72759f2b74d3" />
+# User Reset Password UI
+<img width="936" height="604" alt="image" src="https://github.com/user-attachments/assets/66863370-3d79-4093-ac99-72759f2b74d3" />
