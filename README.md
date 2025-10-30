@@ -49,4 +49,4 @@ CREATE TABLE users (
 <img width="936" height="371" alt="image" src="https://github.com/user-attachments/assets/8d67a7ca-56ef-4e12-8665-21294566160d" />
 
 # User Reset Password UI
-<img width="936" height="604" alt="image" src="https://github.com/user-attachments/assets/66863370-3d79-4093-ac99-72759f2b74d3" />
+<img width="936" height="704" alt="image" src="https://github.com/user-attachments/assets/1265bae0-2da4-4a20-92cd-ee2098a8c784" />
