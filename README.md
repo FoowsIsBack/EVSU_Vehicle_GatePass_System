@@ -33,14 +33,20 @@ CREATE TABLE users (
 );
 
 ```
+# Main
+<img width="1766" height="886" alt="image" src="https://github.com/user-attachments/assets/65c47174-0851-4e30-8709-c1621b25d00e" />
+
 # Login UI
 <img width="1460" height="906" alt="image" src="https://github.com/user-attachments/assets/17e7edb7-111c-4221-bc7f-f280303831d8" />
 
-# Register UI
-<img width="1460" height="906" alt="image" src="https://github.com/user-attachments/assets/e72f72d6-d208-45d8-8059-b13ba71ed3ff" />
+# User Register UI
+<img width="1766" height="946" alt="image" src="https://github.com/user-attachments/assets/35a7b762-1ba2-4fcd-a29b-80adc7033233" />
 
-# Forgot Password UI
-<img width="1460" height="906" alt="image" src="https://github.com/user-attachments/assets/6bec2f05-ef80-46f7-92d4-3ac6033ddc07" />
+# User Login UI
+<img width="936" height="704" alt="image" src="https://github.com/user-attachments/assets/a52772b1-6583-4d58-8c2a-1465ac3301c1" />
 
-# Reset Password UI
-<img width="1460" height="906" alt="image" src="https://github.com/user-attachments/assets/5c3927a6-27ac-48df-9da0-f8fa209113be" />
+# User Forgot Acc UI
+<img width="936" height="371" alt="image" src="https://github.com/user-attachments/assets/8d67a7ca-56ef-4e12-8665-21294566160d" />
+
+# User reset Password UI
+<img width="687" height="604" alt="image" src="https://github.com/user-attachments/assets/66863370-3d79-4093-ac99-72759f2b74d3" />
