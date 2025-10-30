@@ -1,0 +1,177 @@
+body{
+    background-color: #A30000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.main{
+    border: 4px solid gold;
+    max-width: 100%;
+    width: 80%;
+    border-radius: 10px;
+    background-color: white;
+    height: 80%;
+}
+
+.container2{
+    text-align: center;
+}
+
+.tt1{
+    color: #A30000;
+    font-size: 300%;
+}
+
+.tt2{
+    color: gold;
+    margin-top: -2%;
+    font-size: 250%;
+    margin-bottom: 35px;
+}
+
+img{
+    margin-top: 20px;
+    margin-bottom: -30px;
+    width: 5%;
+}
+
+.p1{
+    color: rgb(71, 71, 189);
+    margin-top: -1%;
+    font-size: larger;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.p2{
+    margin-top: 50px;
+    color: #A30000;
+    font-size: 20px;
+}
+
+.container3{
+    margin-top: 80px;
+    text-align: center;
+}
+
+button{
+    cursor: pointer;
+    font-size: larger;
+    border-radius: 8px;
+    border: 1px solid grey;
+    padding: 15px;
+    width: 11%;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+.b1{
+    color: #A30000;
+    background-color: gold;
+
+}
+
+.b1:hover{
+    background-color: rgb(184, 157, 5);
+}
+
+.b2{
+    color: gold;
+    background-color: #A30000;
+}
+
+.b2:hover{
+    background-color: #700202;
+}
+
+.container4{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 220px;
+    text-align: center;
+}
+
+.container4 img{
+    width: 60px;
+    height: auto;
+}
+
+.qr{
+    text-align: center;
+}
+
+.p3{
+    color: rgb(112, 106, 106);
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 35px;
+}
+
+.p9{
+    color: #A30000;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.p4{
+    color: rgb(112, 106, 106);
+    font-size: 15px;
+    margin-top: -3%;
+}
+
+.gcash {
+    text-align: center;
+}
+
+img[src="/static/Icons/payment.png"]{
+    background-color: #A30000;
+    border-radius: 95px;
+    border: 5px solid #A30000;
+}
+
+img[src="/static/Icons/digital.png"]{
+    background-color: #A30000;
+    border-radius: 95px;
+    border: 5px solid #A30000;
+}
+
+img[src="/static/Icons/qr_logo.png"]{
+    background-color: #A30000;
+    border-radius: 95px;
+    border: 1px solid #A30000;   
+}
+
+.p5{
+    color: #A30000;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 40px;
+}
+.p6{
+    color: rgb(112, 106, 106);
+    font-size: 15px;
+    margin-top: -3%;
+}
+
+.digital{
+    text-align: center;
+}
+
+.p7{
+    color: #A30000;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 40px;
+}
+.p8{
+    color: rgb(112, 106, 106);
+    font-size: 15px;
+    margin-top: -3%;
+}

@@ -3,7 +3,7 @@ from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 import mysql.connector
-import hashlib
+import bcrypt
 
 app = FastAPI()
 
@@ -22,33 +22,51 @@ def get_db_connection():
 async def home(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
+@app.get("/user_login", response_class=HTMLResponse)
+async def login_page(request: Request):
+    return templates.TemplateResponse("user_login.html", {"request": request})
+
 @app.get("/register", response_class=HTMLResponse)
 async def register_page(request: Request):
     return templates.TemplateResponse("register.html", {"request": request})
 
 @app.post("/submit")
 async def submit_registration(
+    request: Request,
+    fullname: str = Form(...),
+    evsu_id: str = Form(...),
+    contact_number: str = Form(...),
+    department: str = Form(...),
     nm: str = Form(...),
     pwd2: str = Form(...),
     pwd3: str = Form(...),
 ):
     if pwd2 != pwd3:
-        return {"error": "Passwords do not match"}
+        return templates.TemplateResponse(
+            "register.html",
+            {"request": request, "error": "Passwords do not match."}
+        )
 
-    hashed_pwd = hashlib.sha256(pwd2.encode()).hexdigest()[:15]
+    hashed_pwd = bcrypt.hashpw(pwd2.encode(), bcrypt.gensalt()).decode()
 
     conn = get_db_connection()
-    cursor = conn.cursor()
+    cursor = conn.cursor(dictionary=True)
 
     cursor.execute("SELECT * FROM users WHERE email = %s", (nm,))
     existing_user = cursor.fetchone()
     if existing_user:
         conn.close()
-        return {"error": "Email already registered"}
+        return templates.TemplateResponse(
+            "register.html",
+            {"request": request, "error": "Email already registered."}
+        )
 
     cursor.execute(
-        "INSERT INTO users (email, password) VALUES (%s, %s)",
-        (nm, hashed_pwd)
+        """
+        INSERT INTO users (fullname, evsu_id, contact_number, department, email, password)
+        VALUES (%s, %s, %s, %s, %s, %s)
+        """,
+        (fullname, evsu_id, contact_number, department, nm, hashed_pwd)
     )
     conn.commit()
     conn.close()
@@ -57,6 +75,7 @@ async def submit_registration(
 
 @app.post("/login_auth")
 async def login_auth(
+    request: Request,
     nm: str = Form(...),
     pwd: str = Form(...),
 ):
@@ -67,14 +86,18 @@ async def login_auth(
     conn.close()
 
     if not user:
-        return {"error": "Account not found"}
+        return templates.TemplateResponse(
+            "user_login.html",
+            {"request": request, "error": "Account not found."}
+        )
 
-    entered_hash = hashlib.sha256(pwd.encode()).hexdigest()[:15]
+    if not bcrypt.checkpw(pwd.encode(), user["password"].encode()):
+        return templates.TemplateResponse(
+            "user_login.html",
+            {"request": request, "error": "Incorrect password."}
+        )
 
-    if entered_hash != user["password"]:
-        return {"error": "Incorrect password"}
-
-    return RedirectResponse(url="/dashboard", status_code=303)
+    return RedirectResponse(url="/user_dashboard", status_code=303)
 
 @app.get("/forgot", response_class=HTMLResponse)
 async def forgot(request: Request):
@@ -82,11 +105,11 @@ async def forgot(request: Request):
 
 @app.post("/forgot_auth")
 async def forgot_auth(request: Request, nm: str = Form(...)):
-    connection = get_db_connection()
-    cursor = connection.cursor()
+    conn = get_db_connection()
+    cursor = conn.cursor()
     cursor.execute("SELECT * FROM users WHERE email=%s", (nm,))
     user = cursor.fetchone()
-    connection.close()
+    conn.close()
 
     if user:
         return RedirectResponse(url=f"/reset_pass?email={nm}", status_code=303)
@@ -121,7 +144,7 @@ async def reset_auth(
             {"request": request, "error": "Passwords do not match.", "email": email}
         )
 
-    hashed_pwd = hashlib.sha256(pwd1.encode()).hexdigest()[:15]
+    hashed_pwd = bcrypt.hashpw(pwd1.encode(), bcrypt.gensalt()).decode()
 
     conn = get_db_connection()
     cursor = conn.cursor()
@@ -129,8 +152,8 @@ async def reset_auth(
     conn.commit()
     conn.close()
 
-    return RedirectResponse(url="/", status_code=303)
+    return RedirectResponse(url="/user_login", status_code=303)
 
-@app.get("/dashboard", response_class=HTMLResponse)
-async def dashboard(request: Request):
-    return templates.TemplateResponse("dashboard.html", {"request": request})
+@app.get("/user_dashboard", response_class=HTMLResponse)
+async def user_dashboard(request: Request):
+    return templates.TemplateResponse("user_dashboard.html", {"request": request})

@@ -13,13 +13,25 @@
             <div class="pic">
                 <img src="/static/icons/person.png" alt="logo">
             </div>
-            <h3 class="cacar">Create Your GetPass Account</h3>
+            <h3 class="cacar">Create your EVSU Parking Sticker account</h3>
 
             <div class="container2">
-                <form id="registerForm">
-                    <h3 class="email">Email Address</h3>
-                    <input type="email" id="email" name="nm" placeholder="your.email@evsu.edu.ph"
-                        pattern=".+@evsu\.edu\.ph$" required>
+                <form id="registerForm" action="/submit" method="post">
+
+                    <div class="name-container">
+                        <h3>Full Name</h3>
+                        <input type="text" name="fullname" placeholder="Enter your Full Name" required>
+                    </div>
+
+                    <div class="evsu-id-number">
+                        <h3>EVSU ID Number</h3>
+                        <input type="text" name="evsu_id" placeholder="Enter your EVSU ID Number (ex. 2025-1234)" required>
+                    </div>
+
+                    <div class="email">
+                        <h3>Email Address</h3>
+                        <input type="email" id="email" name="nm" placeholder="your.email@evsu.edu.ph" pattern=".+@evsu\.edu\.ph$" required>
+                    </div>
 
                     <h3 class="pass">Password</h3>
                     <div class="password-container">
@@ -32,15 +44,35 @@
                         <input type="password" id="pwd3" name="pwd3" placeholder="Confirm Password" required>
                         <img src="/static/icons/closePass.png" id="togglePassword3" alt="Show Password">
                     </div>
+                    
+                    <div class="contact-num">
+                        <h3>Contact Number</h3>
+                        <input type="tel" name="contact_number" placeholder="Enter your contact number" pattern="[0-9]{11}" maxlength="11" required>
+                    </div>
+
+                    <div class="department-user">
+                        <h3>Department</h3>
+                        <select name="department" required>
+                            <option value="" disabled selected hidden>Select your department</option>
+                            <option value="bped">Bachelor of Physical Education (BPEd)</option>
+                            <option value="bsit">Bachelor of Science in Information Technology (BSIT)</option>
+                            <option value="bsed_science">Major in Science (BSEd)</option>
+                            <option value="bsed_math">Major in Mathematics (BSEd)</option>
+                            <option value="btvted">Bachelor of Technical-Vocational Teacher Education (BTVTEd)</option>
+                            <option value="beed">Bachelor in Elementary Education (BEED)</option>
+                            <option value="elx">Electronics Technology (ELX)</option>
+                            <option value="ca">Association of Culinary Arts Major (CA)</option>
+                            <option value="bshm">Bachelor of Science in Hospitality Management (BSHM)</option>
+                        </select>
+                    </div>
 
                     <div class="term">
                         <label>
-                            <input type="checkbox" name="agree" id="agree" required>
+                            <input type="checkbox" name="agree" required>
                             <span>
                                 I agree to the 
-                                <a href="/terms" class="pass">Terms and Conditions</a> 
-                                and 
-                                <a href="/privacy" class="pass">Privacy Policy</a>
+                                <a href="/terms">Terms and Conditions</a> and 
+                                <a href="/privacy">Privacy Policy</a>
                             </span>
                         </label>
                     </div>
@@ -51,7 +83,7 @@
                 </form>
                 <hr>
                 <div class="already">
-                    <a href="/">Already have an account?</a>
+                    <a href="/user_login">Already have an account?</a>
                 </div>
             </div>
         </div>
@@ -60,5 +92,6 @@
     <script src="/static/javascript/showpass.js"></script>
     <script src="/static/javascript/validateEmail.js"></script>
     <script src="/static/javascript/register.js"></script>
+
 </body>
 </html>

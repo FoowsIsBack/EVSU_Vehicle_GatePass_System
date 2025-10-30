@@ -21,10 +21,17 @@ CREATE DATABASE evsu_vehicle_gatepass;
 USE evsu_vehicle_gatepass;
 
 CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    email VARCHAR(255) UNIQUE NOT NULL,
-    password VARCHAR(255) NOT NULL
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    fullname VARCHAR(50) NOT NULL,
+    evsu_id VARCHAR(15) NOT NULL,
+    contact_number VARCHAR(15) NOT NULL,
+    department VARCHAR(50) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id)
 );
+
 ```
 # Login UI
 <img width="1460" height="906" alt="image" src="https://github.com/user-attachments/assets/17e7edb7-111c-4221-bc7f-f280303831d8" />

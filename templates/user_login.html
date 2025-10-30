@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="shortcut icon" href="/static/icons/car.png" type="image/x-icon">
+    <title>EVSU Parking Sticker Management and Verification System</title>
+</head>
+<body>
+
+    <div class="main">
+        <div class="container1">
+            <div class="pic">
+                <img src="/static/icons/car.png" alt="logo">
+            </div>
+            <h3 class="cacar">Access your parking sticker account</h3>
+
+            <div class="container2">
+                <form action="/login_auth" method="post">
+                    <h3 class="email1">Email Address</h3>
+                    <input type="email" id="email" name="nm" placeholder="your.email@evsu.edu.ph" pattern=".+@evsu\.edu\.ph$" required>
+
+                    <h3 class="pass">Password</h3>
+                    <div class="password-container">
+                        <input type="password" id="pwd1" name="pwd" placeholder="Enter Password" required>
+                        <img src="/static/icons/closePass.png" id="togglePassword1" alt="Show Password">
+                    </div>
+
+                    <div class="checker">
+                        <label>
+                            <input type="checkbox" name="remember" id="savepass">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="/forgot">Forgot password?</a>
+                    </div>
+
+                    <div class="clicker">
+                        <button class="signin" type="submit">Log in</button>
+                    </div>
+                </form>
+                <hr>
+                <div class="register">
+                    <p>Don't have an account?</p>
+                    <a href="/register">Register here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/javascript/showpass.js"></script>
+    <script src="/static/javascript/remember_pass.js"></script>
+
+</body>
+</html>

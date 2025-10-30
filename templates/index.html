@@ -3,53 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/index.css">
-    <link rel="shortcut icon" href="/static/icons/car.png" type="image/x-icon">
-    <title>EVSU Vehicle GatePass System</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="shortcut icon" href="/static/Icons/car.png" type="image/x-icon">
+    <title>EVSU Parking Sticker Management and Verification System</title>
 </head>
 <body>
-
+    
     <div class="main">
-        <div class="container1">
-            <div class="pic">
-                <img src="/static/icons/car.png" alt="logo">
+        <div class="container2">
+            <img src="/static/Icons/main_logo.jpg" alt="logo_evsu">
+            <h1 class="tt1">EVSU PARKING STICKER MANAGEMENT</h1>
+            <h1 class="tt2">AND VERIFICATION SYSTEM</h1>
+            <p class="p1">Modernizing Campus Vehicle Management Through QR Code <br>Verification</p>
+            <p class="p2">Eastern Visayas State University – Ormoc Campus</p>
+        </div>
+        <div class="container3">
+            <button class="b1" type="button">User Portal</button>
+            <button class="b2" type="button">Admin Portal</button>
+            <p class="p3">Choose your portal to access the parking sticker system</p>
+        </div>
+        <div class="container4">
+            <div class="qr">
+                <img src="/static/Icons/qr_logo.png" alt="logo">
+                <p class="p9">QR Code System</p>
+                <p class="p4">Instant verification with QR code scanning</p>
             </div>
-            <h3 class="cacar">EVSU Vehicle GatePass System</h3>
-
-            <div class="container2">
-                <form action="/login_auth" method="post">
-                    <h3 class="email">Email Address</h3>
-                    <input type="email" id="email" name="nm" placeholder="your.email@evsu.edu.ph" pattern=".+@evsu\.edu\.ph$" required>
-
-                    <h3 class="pass">Password</h3>
-                    <div class="password-container">
-                        <input type="password" id="pwd1" name="pwd" placeholder="Enter Password" required>
-                        <img src="/static/icons/closePass.png" id="togglePassword1" alt="Show Password">
-                    </div>
-
-                    <div class="checker">
-                        <label>
-                            <input type="checkbox" name="remember" id="savepass">
-                            <span>Remember me</span>
-                        </label>
-                        <a href="/forgot">Forgot password?</a>
-                    </div>
-
-                    <div class="clicker">
-                        <button class="signin" type="submit">Log in</button>
-                    </div>
-                </form>
-                <hr>
-                <div class="register">
-                    <p>Don't have an account?</p>
-                    <a href="/register">Register here</a>
-                </div>
+            <div class="gcash">
+                <img src="/static/Icons/payment.png" alt="logo">
+                <p class="p5">GCASH Payment</p>
+                <p class="p6">Convenient online payment integration</p>
+            </div>
+            <div class="digital">
+                <img src="/static/Icons/digital.png" alt="logo">
+                <p class="p7">Digital Records</p>
+                <p class="p8">Paperless and efficient record management</p>
             </div>
         </div>
     </div>
 
-    <script src="/static/javascript/showpass.js"></script>
-    <script src="/static/javascript/remember_pass.js"></script>
 
 </body>
 </html>
