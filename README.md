@@ -1,3 +1,6 @@
+# Tech Stack
+[![tect_stack](https://skillicons.dev/icons?i=html,css,js,fastapi,mysql)](https://skillicons.dev)
+
 # Run local
 
 ## Clone the project
