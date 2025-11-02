@@ -50,7 +50,7 @@ Note: I added a scrollbar so the content can be scrolled when it’s too long fo
 ```
 
 # User Login UI
-<img width="936" height="704" alt="image" src="https://github.com/user-attachments/assets/a52772b1-6583-4d58-8c2a-1465ac3301c1" />
+<img width="799" height="743" alt="image" src="https://github.com/user-attachments/assets/aa4760aa-e70f-4184-aa2e-bed7ec58caf2" />
 
 # User Forgot Acc UI
 <img width="936" height="371" alt="image" src="https://github.com/user-attachments/assets/8d67a7ca-56ef-4e12-8665-21294566160d" />
