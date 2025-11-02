@@ -44,6 +44,7 @@ CREATE TABLE users (
 
 # User Register UI
 <img width="1766" height="946" alt="image" src="https://github.com/user-attachments/assets/35a7b762-1ba2-4fcd-a29b-80adc7033233" />
+
 ```sh
 Note: I added a scrollbar so the content can be scrolled when it’s too long for the screen.
 ```
