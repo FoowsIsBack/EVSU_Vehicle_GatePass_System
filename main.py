@@ -30,6 +30,10 @@ async def login_page(request: Request):
 async def register_page(request: Request):
     return templates.TemplateResponse("register.html", {"request": request})
 
+@app.get("/user_portal", response_class=HTMLResponse)
+async def register_page(request: Request):
+    return templates.TemplateResponse("user_portal.html", {"request": request})
+
 @app.post("/submit")
 async def submit_registration(
     request: Request,
