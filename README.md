@@ -1,3 +1,6 @@
+# Tech Stack
+[![tect_stack](https://skillicons.dev/icons?i=html,css,js,fastapi,mysql)](https://skillicons.dev)
+
 # Run local
 
 ## Clone the project
@@ -33,14 +36,24 @@ CREATE TABLE users (
 );
 
 ```
-# Login UI
-<img width="1460" height="906" alt="image" src="https://github.com/user-attachments/assets/17e7edb7-111c-4221-bc7f-f280303831d8" />
+# Main
+<img width="1619" height="851" alt="image" src="https://github.com/user-attachments/assets/3b937ddb-20f6-493e-9fcf-e4e210fcc601" />
 
-# Register UI
-<img width="1460" height="906" alt="image" src="https://github.com/user-attachments/assets/e72f72d6-d208-45d8-8059-b13ba71ed3ff" />
+# User Register UI
+<img width="1766" height="946" alt="image" src="https://github.com/user-attachments/assets/35a7b762-1ba2-4fcd-a29b-80adc7033233" />
 
-# Forgot Password UI
-<img width="1460" height="906" alt="image" src="https://github.com/user-attachments/assets/6bec2f05-ef80-46f7-92d4-3ac6033ddc07" />
+```sh
+Note: I added a scrollbar because the content in my form is too long to fit on the screen
+```
 
-# Reset Password UI
-<img width="1460" height="906" alt="image" src="https://github.com/user-attachments/assets/5c3927a6-27ac-48df-9da0-f8fa209113be" />
+# User Portal UI
+<img width="1649" height="859" alt="image" src="https://github.com/user-attachments/assets/3d6ca804-8123-4328-9fb2-e905d8c9a0cf" />
+
+# User Login UI
+<img width="799" height="743" alt="image" src="https://github.com/user-attachments/assets/aa4760aa-e70f-4184-aa2e-bed7ec58caf2" />
+
+# User Forgot Acc UI
+<img width="936" height="371" alt="image" src="https://github.com/user-attachments/assets/8d67a7ca-56ef-4e12-8665-21294566160d" />
+
+# User Reset Password UI
+<img width="936" height="704" alt="image" src="https://github.com/user-attachments/assets/1265bae0-2da4-4a20-92cd-ee2098a8c784" />
