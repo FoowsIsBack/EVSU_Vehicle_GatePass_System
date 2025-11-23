@@ -61,7 +61,7 @@ Note: I added a scrollbar because the content in my form is too long to fit on t
 # Admin Portal
 <img width="1649" height="859" alt="image" src="https://github.com/user-attachments/assets/331afdce-2f18-4ca6-b57f-e1ce01d59954" />
 
-```sh
-This link lets you access the Admin Portal:
-http://localhost/admin_portal
-```
+> [!NOTE]
+> This link lets you access the Admin Portal:
+> **http://localhost/admin_portal**
+
