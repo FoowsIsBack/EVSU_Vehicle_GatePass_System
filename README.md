@@ -40,7 +40,7 @@ CREATE TABLE users (
 <img width="1619" height="832" alt="image" src="https://github.com/user-attachments/assets/7b02f55c-264c-47ed-9b66-a52f21c71ba4" />
 
 # User Register UI
-<img width="1766" height="946" alt="image" src="https://github.com/user-attachments/assets/35a7b762-1ba2-4fcd-a29b-80adc7033233" />
+<img width="516" height="806" alt="image" src="https://github.com/user-attachments/assets/ba7e4c81-8d97-4ccf-a75b-3ff628e97334" />
 
 > [!NOTE]
 > **Note: I added a scrollbar because the content in my form is too long to fit on the screen**
