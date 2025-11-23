@@ -46,7 +46,7 @@ CREATE TABLE users (
 > **Note: I added a scrollbar because the content in my form is too long to fit on the screen**
 
 # User Portal UI
-<img width="1649" height="852" alt="image" src="https://github.com/user-attachments/assets/f2115fde-d7ac-47af-bf6c-8600b641d003" />
+<img width="1649" height="841" alt="image" src="https://github.com/user-attachments/assets/2967956d-a4bb-4616-abf0-c230c7fa0a22" />
 
 # User Login UI
 <img width="799" height="743" alt="image" src="https://github.com/user-attachments/assets/aa4760aa-e70f-4184-aa2e-bed7ec58caf2" />
