@@ -60,7 +60,4 @@ CREATE TABLE users (
 
 # Admin Portal
 <img width="1649" height="859" alt="image" src="https://github.com/user-attachments/assets/331afdce-2f18-4ca6-b57f-e1ce01d59954" />
-
-```sh
 **Note:** http://localhost/admin_portal **(is the link you can use to access the Admin Portal.)**
-```
