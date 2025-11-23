@@ -37,7 +37,7 @@ CREATE TABLE users (
 
 ```
 # Main
-<img width="1619" height="851" alt="image" src="https://github.com/user-attachments/assets/3b937ddb-20f6-493e-9fcf-e4e210fcc601" />
+<img width="1619" height="832" alt="image" src="https://github.com/user-attachments/assets/7b02f55c-264c-47ed-9b66-a52f21c71ba4" />
 
 # User Register UI
 <img width="1766" height="946" alt="image" src="https://github.com/user-attachments/assets/35a7b762-1ba2-4fcd-a29b-80adc7033233" />
