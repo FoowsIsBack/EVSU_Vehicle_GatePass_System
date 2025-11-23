@@ -82,6 +82,31 @@ button{
     transform: scale(1.1);
 }
 
+.b2{
+    width: 20%;
+    color: #A30000;
+    background-color: gold;
+    transition: all 0.3s ease;
+}
+
+.b2:hover{
+    background-color: rgb(184, 157, 5);
+    transform: scale(1.1);
+}
+
+.b3{
+    width: 20%;
+    color: gold;
+    background-color: #A30000;
+    margin-left: 50px;
+    transition: all 0.3s ease;
+}
+
+.b3:hover{
+    background-color: #700202;
+    transform: scale(1.1);
+}
+
 .container4{
     margin-top: 5%;
     display: flex;
@@ -89,6 +114,7 @@ button{
     align-items: flex-start;
     gap: 220px;
     text-align: center;
+    margin-right: 85px;
 }
 
 .container4 img{
@@ -125,7 +151,7 @@ button{
     margin-top: -5%;
 }
 
-.gcash{
+.status{
     text-align: center;
     margin-top: 10px;
     padding: 10px;
@@ -134,7 +160,7 @@ button{
     transition: all 0.3s ease;
 }
 
-.gcash:hover{
+.status:hover{
     transform: scale(1.1);
     border: 2px solid gold;
     padding: 10px;
@@ -153,10 +179,10 @@ img[src="/static/Icons/digital.png"]{
     border: 5px solid #A30000;
 }
 
-img[src="/static/Icons/qr_logo.png"]{
+img[src="/static/Icons/status.png"]{
     background-color: #A30000;
     border-radius: 95px;
-    border: 1px solid #A30000;   
+    border: 5px solid #A30000;   
 }
 
 .p5{
