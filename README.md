@@ -42,9 +42,8 @@ CREATE TABLE users (
 # User Register UI
 <img width="1766" height="946" alt="image" src="https://github.com/user-attachments/assets/35a7b762-1ba2-4fcd-a29b-80adc7033233" />
 
-```sh
-Note: I added a scrollbar because the content in my form is too long to fit on the screen
-```
+> [!NOTE]
+> **Note: I added a scrollbar because the content in my form is too long to fit on the screen**
 
 # User Portal UI
 <img width="1649" height="852" alt="image" src="https://github.com/user-attachments/assets/f2115fde-d7ac-47af-bf6c-8600b641d003" />
