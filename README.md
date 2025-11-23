@@ -52,10 +52,10 @@ CREATE TABLE users (
 <img width="799" height="743" alt="image" src="https://github.com/user-attachments/assets/4aec5d13-846f-4a41-a36d-a8078450cac1" />
 
 # User Forgot Acc UI
-<img width="654" height="625" alt="image" src="https://github.com/user-attachments/assets/437d8bf0-f43e-406e-a197-5f3d2ba15a15" />
+<img width="834" height="384" alt="image" src="https://github.com/user-attachments/assets/a97353a4-6579-4d30-be7c-41ff9c55c5f8" />
 
 # User Reset Password UI
-<img width="936" height="704" alt="image" src="https://github.com/user-attachments/assets/1265bae0-2da4-4a20-92cd-ee2098a8c784" />
+<img width="949" height="686" alt="image" src="https://github.com/user-attachments/assets/25276f7c-989d-41dd-bef9-ecf18a9abb94" />
 
 # Admin Portal
 <img width="1649" height="859" alt="image" src="https://github.com/user-attachments/assets/331afdce-2f18-4ca6-b57f-e1ce01d59954" />
@@ -63,4 +63,3 @@ CREATE TABLE users (
 > [!NOTE]
 > This link lets you access the Admin Portal:
 > **http://localhost/admin_portal**
-
