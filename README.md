@@ -42,12 +42,11 @@ CREATE TABLE users (
 # User Register UI
 <img width="1766" height="946" alt="image" src="https://github.com/user-attachments/assets/35a7b762-1ba2-4fcd-a29b-80adc7033233" />
 
-```sh
-Note: I added a scrollbar because the content in my form is too long to fit on the screen
-```
+> [!NOTE]
+> **Note: I added a scrollbar because the content in my form is too long to fit on the screen**
 
 # User Portal UI
-<img width="1649" height="859" alt="image" src="https://github.com/user-attachments/assets/3d6ca804-8123-4328-9fb2-e905d8c9a0cf" />
+<img width="1649" height="852" alt="image" src="https://github.com/user-attachments/assets/f2115fde-d7ac-47af-bf6c-8600b641d003" />
 
 # User Login UI
 <img width="799" height="743" alt="image" src="https://github.com/user-attachments/assets/aa4760aa-e70f-4184-aa2e-bed7ec58caf2" />
@@ -61,6 +60,7 @@ Note: I added a scrollbar because the content in my form is too long to fit on t
 # Admin Portal
 <img width="1649" height="859" alt="image" src="https://github.com/user-attachments/assets/331afdce-2f18-4ca6-b57f-e1ce01d59954" />
 
-```sh
-Note: http://localhost/admin_portal is the link you can use to access the Admin Portal.
-```
+> [!NOTE]
+> This link lets you access the Admin Portal:
+> **http://localhost/admin_portal**
+
