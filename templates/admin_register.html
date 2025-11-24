@@ -3,9 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/admin_register.css">
+    <link rel="shortcut icon" href="/static/icons/admin.png" type="image/x-icon">
     <title>Admin | Register Account</title>
 </head>
 <body>
-    
+    <div class="main2">
+        <div class="container1">
+            <div class="pic">
+                <img src="/static/icons/admin.png" alt="logo">
+            </div>
+            <h3 class="cacar">Register as EVSU Parking System Administrator</h3>
+
+            <div class="container2">
+                <form id="registerForm" action="/submit" method="post">
+
+                    <div class="name-container">
+                        <h3>Full Name</h3>
+                        <input type="text" name="fullname" placeholder="Enter your Full Name" required>
+                    </div>
+
+                    <div class="employee-id-number">
+                        <h3>Employee ID Number</h3>
+                        <input type="text" name="evsu_id" placeholder="Enter your Employee ID Number (ex. 2025-1234)" required>
+                    </div>
+
+                    <div class="email">
+                        <h3>Official Email Address</h3>
+                        <input type="email" id="email" name="nm" placeholder="your.email@evsu.edu.ph" pattern=".+@evsu\.edu\.ph$" required>
+                    </div>
+
+                    <div class="admin_user">
+                        <h3>Admin Username</h3>
+                        <input type="text" name="evsu_id" placeholder="Enter your Username" required>
+                    </div>
+
+                    <h3 class="pass">Password</h3>
+                    <div class="password-container">
+                        <input type="password" id="pwd2" name="pwd2" placeholder="Create a strong password" required>
+                        <img src="/static/icons/closePass.png" id="togglePassword2" alt="Show Password">
+                    </div>
+
+                    <h3 class="pass">Confirm Password</h3>
+                    <div class="password-container">
+                        <input type="password" id="pwd3" name="pwd3" placeholder="Confirm Password" required>
+                        <img src="/static/icons/closePass.png" id="togglePassword3" alt="Show Password">
+                    </div>
+                    
+                    <div class="contact-num">
+                        <h3>Contact Number</h3>
+                        <input type="tel" name="contact_number" placeholder="Enter your contact number" pattern="[0-9]{11}" maxlength="11" required>
+                    </div>
+
+                    <div class="department-user">
+                        <h3>Department</h3>
+                        <select name="department" required>
+                            <option value="" disabled selected hidden>Select your department</option>
+                            <option value="Administration">Administration</option>
+                            <option value="Security Office">Security Office</option>
+                            <option value="Facilities Management">Facilities Management</option>
+                            <option value="Parking Management">Parking Management</option>
+                            <option value="Registrar's Office">Registrar's Office</option>
+                        </select>
+                    </div>
+
+                    <div class="role">
+                        <h3>Position/Role</h3>
+                        <select name="role" required>
+                            <option value="" disabled selected hidden>Select your Position</option>
+                            <option value="Parking Administrator">Parking Administrator</option>
+                            <option value="Security Head">Security Head</option>
+                            <option value="Facilities Manager">Facilities Manager</option>
+                            <option value="Administrative Staff">administrative Staff</option>
+                            <option value="Super Administrator">Super Administrator</option>
+                        </select>
+                    </div>
+
+                    <div class="clicker">
+                        <button class="signin" type="submit">Register Admin Account</button>
+                    </div>
+                </form>
+                <hr>
+                <div class="already">
+                    <a href="/admin_portal">Already have an admin account?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/javascript/showpass.js"></script>
+    <script src="/static/javascript/validateEmail.js"></script>
+    <script src="/static/javascript/register.js"></script>
+
 </body>
 </html>

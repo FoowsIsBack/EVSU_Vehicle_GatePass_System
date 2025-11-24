@@ -234,20 +234,20 @@ input::placeholder{
 }
 
 button.signin{
-    background-color: #A30000;
+    background-color: gold;
     border-radius: 10px;
     width: 100%;
     max-width: 550px;
     font-size: larger;
-    color: white;
+    color: #A30000;
     padding: 10px;
     cursor: pointer;
     font-weight: bold;
-    border: 1px solid #A30000;
+    border: 1px solid gold;
 }
 
 button.signin:hover{
-    background-color: #700202;
+    background-color: rgb(184, 157, 5);
 }
 
 .register{
@@ -424,16 +424,20 @@ button.cancel_2:hover{
 }
 
 button.cancel_3{
-    background-color: #A30000;
+    background-color: gold;
     border-radius: 10px;
     width: 100%;
     max-width: 550px;
     font-size: larger;
-    color: white;
+    color: #A30000;
     padding: 10px;
     cursor: pointer;
     font-weight: bold;
-    border: 1px solid #A30000;
+    border: 1px solid gold;
+}
+
+.cancel_3:hover{
+    background-color: rgb(184, 157, 5);
 }
 
 .clicker_reset{
