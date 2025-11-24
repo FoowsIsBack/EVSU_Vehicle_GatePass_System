@@ -37,25 +37,25 @@ CREATE TABLE users (
 
 ```
 # Main
-<img width="1619" height="851" alt="image" src="https://github.com/user-attachments/assets/3b937ddb-20f6-493e-9fcf-e4e210fcc601" />
+<img width="1619" height="832" alt="image" src="https://github.com/user-attachments/assets/7b02f55c-264c-47ed-9b66-a52f21c71ba4" />
 
 # User Register UI
-<img width="1766" height="946" alt="image" src="https://github.com/user-attachments/assets/35a7b762-1ba2-4fcd-a29b-80adc7033233" />
+<img width="516" height="806" alt="image" src="https://github.com/user-attachments/assets/ba7e4c81-8d97-4ccf-a75b-3ff628e97334" />
 
 > [!NOTE]
-> **Note: I added a scrollbar because the content in my form is too long to fit on the screen**
+> **Note: I added a scrollbar because the form content is too long to fit on the screen.**
 
 # User Portal UI
-<img width="1649" height="852" alt="image" src="https://github.com/user-attachments/assets/f2115fde-d7ac-47af-bf6c-8600b641d003" />
+<img width="1649" height="841" alt="image" src="https://github.com/user-attachments/assets/2967956d-a4bb-4616-abf0-c230c7fa0a22" />
 
 # User Login UI
-<img width="799" height="743" alt="image" src="https://github.com/user-attachments/assets/aa4760aa-e70f-4184-aa2e-bed7ec58caf2" />
+<img width="799" height="743" alt="image" src="https://github.com/user-attachments/assets/4aec5d13-846f-4a41-a36d-a8078450cac1" />
 
 # User Forgot Acc UI
-<img width="936" height="371" alt="image" src="https://github.com/user-attachments/assets/8d67a7ca-56ef-4e12-8665-21294566160d" />
+<img width="834" height="384" alt="image" src="https://github.com/user-attachments/assets/a97353a4-6579-4d30-be7c-41ff9c55c5f8" />
 
 # User Reset Password UI
-<img width="936" height="704" alt="image" src="https://github.com/user-attachments/assets/1265bae0-2da4-4a20-92cd-ee2098a8c784" />
+<img width="949" height="686" alt="image" src="https://github.com/user-attachments/assets/25276f7c-989d-41dd-bef9-ecf18a9abb94" />
 
 # Admin Portal
 <img width="1649" height="859" alt="image" src="https://github.com/user-attachments/assets/331afdce-2f18-4ca6-b57f-e1ce01d59954" />
@@ -63,4 +63,3 @@ CREATE TABLE users (
 > [!NOTE]
 > This link lets you access the Admin Portal:
 > **http://localhost/admin_portal**
-
