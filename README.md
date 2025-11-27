@@ -49,7 +49,7 @@ CREATE TABLE users (
 <img width="1649" height="841" alt="image" src="https://github.com/user-attachments/assets/2967956d-a4bb-4616-abf0-c230c7fa0a22" />
 
 # User Login UI
-<img width="799" height="743" alt="image" src="https://github.com/user-attachments/assets/4aec5d13-846f-4a41-a36d-a8078450cac1" />
+<img width="722" height="695" alt="image" src="https://github.com/user-attachments/assets/6dcb9597-b6d9-48de-a4cc-21e87fddbb98" />
 
 # User Forgot Acc UI
 <img width="649" height="496" alt="image" src="https://github.com/user-attachments/assets/79b360c0-39f9-4499-bc9a-c5adec7866f6" />
@@ -57,9 +57,20 @@ CREATE TABLE users (
 # User Reset Password UI
 <img width="949" height="686" alt="image" src="https://github.com/user-attachments/assets/25276f7c-989d-41dd-bef9-ecf18a9abb94" />
 
-# Admin Portal
+# Admin Portal UI
 <img width="1649" height="859" alt="image" src="https://github.com/user-attachments/assets/331afdce-2f18-4ca6-b57f-e1ce01d59954" />
 
 > [!NOTE]
 > This link lets you access the Admin Portal:
 > **http://localhost/admin_portal**
+
+# Admin Register UI
+<img width="1080" height="877" alt="image" src="https://github.com/user-attachments/assets/decbef34-e4ea-4185-a29d-33f4cf00f557" />
+
+> [!NOTE]
+> **Note: I added a scrollbar because the form content is too long to fit on the screen.**
+
+# Admin Login UI
+<img width="663" height="675" alt="image" src="https://github.com/user-attachments/assets/5db48ef2-73d3-4966-a564-ed80fa54d9eb" />
+
+
