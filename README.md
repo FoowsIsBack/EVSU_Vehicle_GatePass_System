@@ -52,7 +52,7 @@ CREATE TABLE users (
 <img width="799" height="743" alt="image" src="https://github.com/user-attachments/assets/4aec5d13-846f-4a41-a36d-a8078450cac1" />
 
 # User Forgot Acc UI
-<img width="671" height="486" alt="image" src="https://github.com/user-attachments/assets/921edcd9-c4ef-49ba-86ba-4df4143a6605" />
+<img width="649" height="496" alt="image" src="https://github.com/user-attachments/assets/79b360c0-39f9-4499-bc9a-c5adec7866f6" />
 
 # User Reset Password UI
 <img width="949" height="686" alt="image" src="https://github.com/user-attachments/assets/25276f7c-989d-41dd-bef9-ecf18a9abb94" />
