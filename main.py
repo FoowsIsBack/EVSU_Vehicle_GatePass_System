@@ -54,6 +54,10 @@ async def terms_page(request: Request):
 async def privacy_page(request: Request):
     return templates.TemplateResponse("privacy.html", {"request": request})
 
+@app.get("/admin_forgotPass", response_class=HTMLResponse)
+async def admin_forgotPass_page(request: Request):
+    return templates.TemplateResponse("admin_forgotPass.html", {"request": request})
+
 @app.post("/submit")
 async def submit_registration(
     request: Request,

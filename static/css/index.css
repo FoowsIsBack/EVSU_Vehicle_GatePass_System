@@ -21,6 +21,11 @@ img{
     border-radius: 50%;
 }
 
+img[src="/static/Icons/person.png"]{
+    margin-top: 30px;
+    margin-left: 42%;
+}
+
 h3{
     color: #A30000;
 }
@@ -103,7 +108,7 @@ input::placeholder{
     font-size: medium;
 }
 
-.checker {
+.checker{
     display: flex;
     align-items: center;
     gap: 50%;
@@ -112,7 +117,7 @@ input::placeholder{
     white-space: nowrap;
 }
 
-.term {
+.term{
     display: flex;
     align-items: center;
     gap: 50%;
@@ -122,7 +127,7 @@ input::placeholder{
     margin-bottom: 3%;
 }
 
-.term label {
+.term label{
     display: flex;
     align-items: center;
     gap: 6px;
@@ -133,23 +138,23 @@ input::placeholder{
     margin-bottom: -5px;
 }
 
-.term input[type="checkbox"] {
+.term input[type="checkbox"]{
     accent-color: #A30000;
     cursor: pointer;
     transform: scale(1.5);
 }
 
-.term a {
+.term a{
     color: #A30000;
     text-decoration: none;
     font-weight: 500;
 }
 
-.term a:hover {
+.term a:hover{
     text-decoration: underline;
 }
 
-.checker label {
+.checker label{
     display: flex;
     align-items: center;
     gap: 6px;
@@ -158,19 +163,19 @@ input::placeholder{
     color: rgb(65, 62, 62);
 }
 
-.checker input[type="checkbox"] {
+.checker input[type="checkbox"]{
     accent-color: #A30000;
     cursor: pointer;
     transform: scale(1.5);
 }
 
-.checker a {
+.checker a{
     color: #A30000;
     text-decoration: none;
     font-weight: 500;
 }
 
-.checker a:hover {
+.checker a:hover{
     text-decoration: underline;
 }
 
@@ -233,7 +238,7 @@ input::placeholder{
     padding: 10px;
 }
 
-button.signin{
+.signin{
     background-color: gold;
     border-radius: 10px;
     width: 100%;
@@ -246,7 +251,7 @@ button.signin{
     border: 1px solid gold;
 }
 
-button.signin:hover{
+.signin:hover{
     background-color: rgb(184, 157, 5);
 }
 
@@ -345,7 +350,7 @@ p{
     text-decoration: underline;
 }
 
-input.error {
+input.error{
     border: 2px solid red !important;
     background-color: #fff5f5;
     transition: border 0.3s ease;

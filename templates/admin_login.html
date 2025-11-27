@@ -3,10 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/static/Icons/admin.png" type="image/x-icon">
-    <title>Admin | Login Account</title>
+    <link rel="stylesheet" href="/static/css/admin_login.css">
+    <link rel="shortcut icon" href="/static/icons/admin.png" type="image/x-icon">
+    <title>Admin | Log in Account</title>
 </head>
 <body>
+
+    <div class="main">
+        <div class="container1">
+            <div class="pic">
+                <img src="/static/icons/admin_login_icon.png" alt="logo">
+            </div>
+            <h3 class="cacar">Admin Control Dashboard</h3>
+
+            <div class="container2">
+                <form action="/login_auth" method="post">
+                    <h3 class="email1">Admin Username</h3>
+                    <input type="email" id="email" name="nm" placeholder="Enter admin username" pattern=".+@evsu\.edu\.ph$" required>
+
+                    <h3 class="pass">Password</h3>
+                    <div class="password-container">
+                        <input type="password" id="pwd1" name="pwd" placeholder="Enter admin password" required>
+                        <img src="/static/icons/closePass.png" id="togglePassword1" alt="Show Password">
+                    </div>
+
+                    <div class="checker">
+                        <label>
+                            <input type="checkbox" name="remember" id="savepass">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="/admin_forgotPass">Forgot password?</a>
+                    </div>
+
+                    <div class="clicker">
+                        <button class="signin" type="submit">Access Admin Panel</button>
+                    </div>
+                </form>
+                <hr>
+                <div class="register">
+                    <p>Don't have an account?</p>
+                    <a href="/admin_register">Register here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="homepage">
+        <a href="/admin_portal">← Back to Admin Portal</a>
+    </div>
     
+
+    <script src="/static/javascript/showpass.js"></script>
+    <script src="/static/javascript/remember_pass.js"></script>
+
 </body>
 </html>
