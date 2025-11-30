@@ -83,6 +83,5 @@ CREATE TABLE admins (
 > **Note: I added a scrollbar because the form content is too long to fit on the screen.**
 
 # Admin Login UI
-<img width="663" height="675" alt="image" src="https://github.com/user-attachments/assets/5db48ef2-73d3-4966-a564-ed80fa54d9eb" />
-
+<img width="782" height="713" alt="image" src="https://github.com/user-attachments/assets/34a23327-dc06-41d9-a639-0dcf4fed54d5" />
 
