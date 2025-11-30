@@ -60,6 +60,9 @@ CREATE TABLE admins (
 # User Portal UI
 <img width="1649" height="841" alt="image" src="https://github.com/user-attachments/assets/2967956d-a4bb-4616-abf0-c230c7fa0a22" />
 
+# Admin Portal UI
+<img width="1649" height="859" alt="image" src="https://github.com/user-attachments/assets/331afdce-2f18-4ca6-b57f-e1ce01d59954" />
+
 # User Login UI
 <img width="702" height="710" alt="image" src="https://github.com/user-attachments/assets/aaf5699d-780c-43d1-a781-e2d9b8d913a6" />
 
@@ -68,9 +71,6 @@ CREATE TABLE admins (
 
 # User Reset Password UI
 <img width="720" height="689" alt="image" src="https://github.com/user-attachments/assets/e8ea864c-3aad-4244-882e-77d02c8926be" />
-
-# Admin Portal UI
-<img width="1649" height="859" alt="image" src="https://github.com/user-attachments/assets/331afdce-2f18-4ca6-b57f-e1ce01d59954" />
 
 > [!NOTE]
 > This link lets you access the Admin Portal:
