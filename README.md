@@ -85,3 +85,8 @@ CREATE TABLE admins (
 # Admin Login UI
 <img width="782" height="713" alt="image" src="https://github.com/user-attachments/assets/34a23327-dc06-41d9-a639-0dcf4fed54d5" />
 
+# Admin Forgot Acc UI
+<img width="730" height="485" alt="image" src="https://github.com/user-attachments/assets/cd5c6ab3-3e66-41ba-81db-6598e83977bb" />
+
+# Admin Reset Password UI
+<img width="719" height="686" alt="image" src="https://github.com/user-attachments/assets/e5918fe1-1a35-4551-b1f1-6ae93079e66d" />
