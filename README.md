@@ -61,13 +61,13 @@ CREATE TABLE admins (
 <img width="1649" height="841" alt="image" src="https://github.com/user-attachments/assets/2967956d-a4bb-4616-abf0-c230c7fa0a22" />
 
 # User Login UI
-<img width="722" height="695" alt="image" src="https://github.com/user-attachments/assets/6dcb9597-b6d9-48de-a4cc-21e87fddbb98" />
+<img width="702" height="710" alt="image" src="https://github.com/user-attachments/assets/aaf5699d-780c-43d1-a781-e2d9b8d913a6" />
 
 # User Forgot Acc UI
-<img width="649" height="496" alt="image" src="https://github.com/user-attachments/assets/79b360c0-39f9-4499-bc9a-c5adec7866f6" />
+<img width="731" height="487" alt="image" src="https://github.com/user-attachments/assets/fc165311-0247-45b2-a32e-dcb500457206" />
 
 # User Reset Password UI
-<img width="949" height="686" alt="image" src="https://github.com/user-attachments/assets/25276f7c-989d-41dd-bef9-ecf18a9abb94" />
+<img width="720" height="689" alt="image" src="https://github.com/user-attachments/assets/e8ea864c-3aad-4244-882e-77d02c8926be" />
 
 # Admin Portal UI
 <img width="1649" height="859" alt="image" src="https://github.com/user-attachments/assets/331afdce-2f18-4ca6-b57f-e1ce01d59954" />
