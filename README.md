@@ -35,6 +35,18 @@ CREATE TABLE users (
     PRIMARY KEY (id)
 );
 
+CREATE TABLE admins (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    fullname VARCHAR(50),
+    evsu_id VARCHAR(50),
+    email VARCHAR(50),
+    username VARCHAR(50),
+    password TEXT,
+    contact_number VARCHAR(11),
+    department VARCHAR(100),
+    role VARCHAR(100)
+);
+
 ```
 # Main
 <img width="1619" height="832" alt="image" src="https://github.com/user-attachments/assets/7b02f55c-264c-47ed-9b66-a52f21c71ba4" />

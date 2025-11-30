@@ -42,6 +42,10 @@ async def admin_page(request: Request):
 async def admin_login_page(request: Request):
     return templates.TemplateResponse("admin_login.html", {"request": request})
 
+@app.get("/admin_dashboard", response_class=HTMLResponse)
+async def admin_dashboard_page(request: Request):
+    return templates.TemplateResponse("admin_dashboard.html", {"request": request})
+
 @app.get("/admin_register", response_class=HTMLResponse)
 async def admin_register_page(request: Request):
     return templates.TemplateResponse("admin_register.html", {"request": request})
@@ -101,6 +105,79 @@ async def submit_registration(
 
     return RedirectResponse(url="/", status_code=303)
 
+@app.post("/admin_register_submit")
+async def admin_register_submit(
+    request: Request,
+    fullname: str = Form(...),
+    evsu_id: str = Form(...),
+    nm: str = Form(...),
+    username: str = Form(...),
+    pwd2: str = Form(...),
+    pwd3: str = Form(...),
+    contact_number: str = Form(...),
+    department: str = Form(...),
+    role: str = Form(...),
+):
+    if len(fullname) > 50:
+        return templates.TemplateResponse(
+            "admin_register.html",
+            {"request": request, "error": "Full Name must not exceed 50 characters."}
+        )
+
+    if not nm.endswith("@evsu.edu.ph"):
+        return templates.TemplateResponse(
+            "admin_register.html",
+            {"request": request, "error": "Email must end with @evsu.edu.ph"}
+        )
+
+    if len(username) > 50:
+        return templates.TemplateResponse(
+            "admin_register.html",
+            {"request": request, "error": "Username must not exceed 50 characters."}
+        )
+
+    if pwd2 != pwd3:
+        return templates.TemplateResponse(
+            "admin_register.html",
+            {"request": request, "error": "Passwords do not match."}
+        )
+
+    hashed_pwd = bcrypt.hashpw(pwd2.encode(), bcrypt.gensalt()).decode()
+
+    conn = get_db_connection()
+    cursor = conn.cursor(dictionary=True)
+
+    cursor.execute("SELECT * FROM admins WHERE email=%s", (nm,))
+    if cursor.fetchone():
+        conn.close()
+        return templates.TemplateResponse(
+            "admin_register.html",
+            {"request": request, "error": "This email is already registered."}
+        )
+
+    cursor.execute("SELECT * FROM admins WHERE username=%s", (username,))
+    if cursor.fetchone():
+        conn.close()
+        return templates.TemplateResponse(
+            "admin_register.html",
+            {"request": request, "error": "Username is already taken."}
+        )
+
+    cursor.execute(
+        """
+        INSERT INTO admins 
+        (fullname, evsu_id, email, username, password, contact_number, department, role)
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+        """,
+        (fullname, evsu_id, nm, username, hashed_pwd, contact_number, department, role)
+    )
+
+    conn.commit()
+    conn.close()
+
+    return RedirectResponse(url="/admin_portal", status_code=303)
+
+
 @app.post("/login_auth")
 async def login_auth(
     request: Request,
@@ -126,6 +203,35 @@ async def login_auth(
         )
 
     return RedirectResponse(url="/user_dashboard", status_code=303)
+
+
+@app.post("/admin_login_auth")
+async def admin_login_auth(
+    request: Request,
+    nm: str = Form(...),
+    pwd: str = Form(...),
+):
+    conn = get_db_connection()
+    cursor = conn.cursor(dictionary=True)
+
+    cursor.execute("SELECT * FROM admins WHERE username=%s OR email=%s", (nm, nm))
+    admin = cursor.fetchone()
+    conn.close()
+
+    if not admin:
+        return templates.TemplateResponse(
+            "admin_login.html",
+            {"request": request, "error": "Admin account not found."}
+        )
+
+    if not bcrypt.checkpw(pwd.encode(), admin["password"].encode()):
+        return templates.TemplateResponse(
+            "admin_login.html",
+            {"request": request, "error": "Incorrect password."}
+        )
+
+    return RedirectResponse(url="/admin_dashboard", status_code=303)
+
 
 @app.get("/forgot", response_class=HTMLResponse)
 async def forgot(request: Request):

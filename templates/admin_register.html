@@ -16,7 +16,7 @@
             <h3 class="cacar">Register as EVSU Parking System Administrator</h3>
 
             <div class="container2">
-                <form id="registerForm" action="/submit" method="post">
+                <form id="adminRegisterForm" action="/admin_register_submit" method="post">
 
                     <div class="name-container">
                         <h3>Full Name</h3>
@@ -25,17 +25,17 @@
 
                     <div class="employee-id-number">
                         <h3>Employee ID Number</h3>
-                        <input type="text" name="evsu_id" placeholder="Enter your Employee ID Number (ex. 2025-1234)" required>
+                        <input type="text" name="evsu_id" placeholder="Enter your Employee ID Number" required>
                     </div>
 
                     <div class="email">
                         <h3>Official Email Address</h3>
-                        <input type="email" id="email" name="nm" placeholder="your.email@evsu.edu.ph" pattern=".+@evsu\.edu\.ph$" required>
+                        <input type="email" name="nm" placeholder="your.email@evsu.edu.ph" pattern=".+@evsu\.edu\.ph$" required>
                     </div>
 
                     <div class="admin_user">
                         <h3>Admin Username</h3>
-                        <input type="text" name="evsu_id" placeholder="Enter your Username" required>
+                        <input type="text" name="username" placeholder="Enter your Username" required>
                     </div>
 
                     <h3 class="pass">Password</h3>
@@ -49,7 +49,7 @@
                         <input type="password" id="pwd3" name="pwd3" placeholder="Confirm Password" required>
                         <img src="/static/icons/closePass.png" id="togglePassword3" alt="Show Password">
                     </div>
-                    
+
                     <div class="contact-num">
                         <h3>Contact Number</h3>
                         <input type="tel" name="contact_number" placeholder="Enter your contact number" pattern="[0-9]{11}" maxlength="11" required>
@@ -74,7 +74,7 @@
                             <option value="Parking Administrator">Parking Administrator</option>
                             <option value="Security Head">Security Head</option>
                             <option value="Facilities Manager">Facilities Manager</option>
-                            <option value="Administrative Staff">administrative Staff</option>
+                            <option value="Administrative Staff">Administrative Staff</option>
                             <option value="Super Administrator">Super Administrator</option>
                         </select>
                     </div>
@@ -92,8 +92,6 @@
     </div>
 
     <script src="/static/javascript/showpass.js"></script>
-    <script src="/static/javascript/validateEmail.js"></script>
-    <script src="/static/javascript/register.js"></script>
-
+    <script src="/static/javascript/admin_register.js"></script>
 </body>
 </html>
