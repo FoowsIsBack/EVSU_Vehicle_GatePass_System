@@ -60,17 +60,17 @@ CREATE TABLE admins (
 # User Portal UI
 <img width="1649" height="841" alt="image" src="https://github.com/user-attachments/assets/2967956d-a4bb-4616-abf0-c230c7fa0a22" />
 
-# User Login UI
-<img width="722" height="695" alt="image" src="https://github.com/user-attachments/assets/6dcb9597-b6d9-48de-a4cc-21e87fddbb98" />
-
-# User Forgot Acc UI
-<img width="649" height="496" alt="image" src="https://github.com/user-attachments/assets/79b360c0-39f9-4499-bc9a-c5adec7866f6" />
-
-# User Reset Password UI
-<img width="949" height="686" alt="image" src="https://github.com/user-attachments/assets/25276f7c-989d-41dd-bef9-ecf18a9abb94" />
-
 # Admin Portal UI
 <img width="1649" height="859" alt="image" src="https://github.com/user-attachments/assets/331afdce-2f18-4ca6-b57f-e1ce01d59954" />
+
+# User Login UI
+<img width="702" height="710" alt="image" src="https://github.com/user-attachments/assets/aaf5699d-780c-43d1-a781-e2d9b8d913a6" />
+
+# User Forgot Acc UI
+<img width="731" height="487" alt="image" src="https://github.com/user-attachments/assets/fc165311-0247-45b2-a32e-dcb500457206" />
+
+# User Reset Password UI
+<img width="720" height="689" alt="image" src="https://github.com/user-attachments/assets/e8ea864c-3aad-4244-882e-77d02c8926be" />
 
 > [!NOTE]
 > This link lets you access the Admin Portal:
@@ -83,6 +83,10 @@ CREATE TABLE admins (
 > **Note: I added a scrollbar because the form content is too long to fit on the screen.**
 
 # Admin Login UI
-<img width="663" height="675" alt="image" src="https://github.com/user-attachments/assets/5db48ef2-73d3-4966-a564-ed80fa54d9eb" />
+<img width="782" height="713" alt="image" src="https://github.com/user-attachments/assets/34a23327-dc06-41d9-a639-0dcf4fed54d5" />
 
+# Admin Forgot Acc UI
+<img width="730" height="485" alt="image" src="https://github.com/user-attachments/assets/cd5c6ab3-3e66-41ba-81db-6598e83977bb" />
 
+# Admin Reset Password UI
+<img width="719" height="686" alt="image" src="https://github.com/user-attachments/assets/e5918fe1-1a35-4551-b1f1-6ae93079e66d" />
