@@ -260,6 +260,24 @@ async def forgot_auth(request: Request, nm: str = Form(...)):
             "forgot_pass.html",
             {"request": request, "error": "Email not found. Please try again."}
         )
+    
+
+@app.post("/admin_forgot_auth")
+async def forgot_auth(request: Request, nm: str = Form(...)):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM admins WHERE email=%s", (nm,))
+    user = cursor.fetchone()
+    conn.close()
+
+    if user:
+        return RedirectResponse(url=f"/admin_resetPass?email={nm}", status_code=303)
+    else:
+        return templates.TemplateResponse(
+            "admin_forgotPass.html",
+            {"request": request, "error": "Email not found. Please try again."}
+        )
+
 
 @app.get("/reset_pass", response_class=HTMLResponse)
 async def reset_pass(request: Request):
@@ -295,4 +313,35 @@ async def reset_auth(
     conn.close()
 
     return RedirectResponse(url="/user_login", status_code=303)
+
+
+@app.post("/admin_reset_auth")
+async def reset_auth(
+    request: Request,
+    pwd1: str = Form(...),
+    pwd2: str = Form(...),
+):
+    email = request.query_params.get("email")
+
+    if not email:
+        return templates.TemplateResponse(
+            "reset_pass.html",
+            {"request": request, "error": "Missing email information."}
+        )
+
+    if pwd1 != pwd2:
+        return templates.TemplateResponse(
+            "reset_pass.html",
+            {"request": request, "error": "Passwords do not match.", "email": email}
+        )
+
+    hashed_pwd = bcrypt.hashpw(pwd1.encode(), bcrypt.gensalt()).decode()
+
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("UPDATE admins SET password=%s WHERE email=%s", (hashed_pwd, email))
+    conn.commit()
+    conn.close()
+
+    return RedirectResponse(url="/admin_login", status_code=303)
 
