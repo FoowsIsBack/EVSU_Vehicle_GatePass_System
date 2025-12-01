@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/admin_forgotPass.css">
-    <link rel="shortcut icon" href="/static/Icons/admin.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/static/icons/admin.png" type="image/x-icon">
     <title>Forgot password | Admin Account</title>
 </head>
 <body>
-    
+
+    <div class="main">
+        <div class="container1">
+            <img src="/static/Icons/admin.png" alt="person">
+            <h3 class="find">Find your account</h3>
+
+            <div class="container3">
+                <form action="/forgot_auth" method="post">
+                    <p class="forgot_search">Please enter your EVSU email to search for your account.</p>
+                    <input type="email" name="nm" placeholder="your.email@evsu.edu.ph" pattern=".+@evsu\.edu\.ph$" required>
+
+                    <div class="clicker_cancel">
+                        <button class="cancel_1" type="button" onclick="admin_login()">Cancel</button>
+                        <button class="cancel_2" type="submit">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/javascript/showpass.js"></script>
+    <script src="/static/javascript/nextpage.js"></script>
+
 </body>
 </html>

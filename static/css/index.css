@@ -183,12 +183,16 @@ input::placeholder{
     background-color: white;
     padding: 10px;
     padding-left: 5%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .container3{
     background-color: white;
     padding: 10px;
     padding-left: 5%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .main{

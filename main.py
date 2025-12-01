@@ -34,6 +34,10 @@ async def register_page(request: Request):
 async def user_portal(request: Request):
     return templates.TemplateResponse("user_portal.html", {"request": request})
 
+@app.get("/forgot", response_class=HTMLResponse)
+async def forgot(request: Request):
+    return templates.TemplateResponse("forgot_pass.html", {"request": request})
+
 @app.get("/admin_portal", response_class=HTMLResponse)
 async def admin_page(request: Request):
     return templates.TemplateResponse("admin_portal.html", {"request": request})
@@ -61,6 +65,15 @@ async def privacy_page(request: Request):
 @app.get("/admin_forgotPass", response_class=HTMLResponse)
 async def admin_forgotPass_page(request: Request):
     return templates.TemplateResponse("admin_forgotPass.html", {"request": request})
+
+@app.get("/user_dashboard", response_class=HTMLResponse)
+async def user_dashboard(request: Request):
+    return templates.TemplateResponse("user_dashboard.html", {"request": request})
+
+@app.get("/admin_resetPass", response_class=HTMLResponse)
+async def reset_pass(request: Request):
+    email = request.query_params.get("email")
+    return templates.TemplateResponse("admin_resetPass.html", {"request": request, "email": email})
 
 @app.post("/submit")
 async def submit_registration(
@@ -232,11 +245,6 @@ async def admin_login_auth(
 
     return RedirectResponse(url="/admin_dashboard", status_code=303)
 
-
-@app.get("/forgot", response_class=HTMLResponse)
-async def forgot(request: Request):
-    return templates.TemplateResponse("forgot_pass.html", {"request": request})
-
 @app.post("/forgot_auth")
 async def forgot_auth(request: Request, nm: str = Form(...)):
     conn = get_db_connection()
@@ -288,6 +296,3 @@ async def reset_auth(
 
     return RedirectResponse(url="/user_login", status_code=303)
 
-@app.get("/user_dashboard", response_class=HTMLResponse)
-async def user_dashboard(request: Request):
-    return templates.TemplateResponse("user_dashboard.html", {"request": request})

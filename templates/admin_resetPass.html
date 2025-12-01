@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/admin_resetPass.css">
+    <link rel="shortcut icon" href="/static/icons/main_logo.jpg" type="image/x-icon">
+    <title>Reset Admin Password | EVSU Parking Sticker Management and Verification System</title>
+</head>
+<body>
+
+    <div class="main">
+        <div class="container1">
+            <div class="pic">
+                <img src="/static/icons/main_logo.jpg" alt="logo">
+            </div>
+            <h3 class="find">Reset your password</h3>
+            <p class="find">Create a new secure password for your account</p>
+
+            <div class="container3">
+                <form id="resetForm" action="/reset_auth?email={{ email }}" method="post">
+
+                    <h3 class="pass">New Password</h3>
+                    <div class="password-container">
+                        <input type="password" id="pwd1" name="pwd1" placeholder="Enter New Password" required>
+                        <img src="/static/icons/closePass.png" id="togglePassword1" alt="Show Password">
+                    </div>
+
+                    <h3 class="pass">Confirm Password</h3>
+                    <div class="password-container">
+                        <input type="password" id="pwd2" name="pwd2" placeholder="Confirm New Password" required>
+                        <img src="/static/icons/closePass.png" id="togglePassword2" alt="Show Password">
+                    </div>
+
+                    <div class="clicker_reset">
+                        <button class="cancel_3" type="submit">Reset Password</button>
+                    </div>
+                    <hr>
+                    <div class="back_to_login">
+                        <p>Remember your password?</p>
+                        <a href="/admin_login">Back to Login</a>
+                    </div>                    
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/javascript/showpass.js"></script>
+    <script src="/static/javascript/reset_password_error.js"></script>
+
+</body>
+</html>
