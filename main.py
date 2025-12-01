@@ -19,59 +19,59 @@ def get_db_connection():
     )
 
 @app.get("/", response_class=HTMLResponse)
-async def home(request: Request):
+def home(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
 @app.get("/user_login", response_class=HTMLResponse)
-async def login_page(request: Request):
+def login_page(request: Request):
     return templates.TemplateResponse("user_login.html", {"request": request})
 
 @app.get("/register", response_class=HTMLResponse)
-async def register_page(request: Request):
+def register_page(request: Request):
     return templates.TemplateResponse("register.html", {"request": request})
 
 @app.get("/user_portal", response_class=HTMLResponse)
-async def user_portal(request: Request):
+def user_portal(request: Request):
     return templates.TemplateResponse("user_portal.html", {"request": request})
 
 @app.get("/forgot", response_class=HTMLResponse)
-async def forgot(request: Request):
+def forgot(request: Request):
     return templates.TemplateResponse("forgot_pass.html", {"request": request})
 
 @app.get("/admin_portal", response_class=HTMLResponse)
-async def admin_page(request: Request):
+def admin_page(request: Request):
     return templates.TemplateResponse("admin_portal.html", {"request": request})
 
 @app.get("/admin_login", response_class=HTMLResponse)
-async def admin_login_page(request: Request):
+def admin_login_page(request: Request):
     return templates.TemplateResponse("admin_login.html", {"request": request})
 
 @app.get("/admin_dashboard", response_class=HTMLResponse)
-async def admin_dashboard_page(request: Request):
+def admin_dashboard_page(request: Request):
     return templates.TemplateResponse("admin_dashboard.html", {"request": request})
 
 @app.get("/admin_register", response_class=HTMLResponse)
-async def admin_register_page(request: Request):
+def admin_register_page(request: Request):
     return templates.TemplateResponse("admin_register.html", {"request": request})
 
 @app.get("/terms", response_class=HTMLResponse)
-async def terms_page(request: Request):
+def terms_page(request: Request):
     return templates.TemplateResponse("terms.html", {"request": request})
 
 @app.get("/privacy", response_class=HTMLResponse)
-async def privacy_page(request: Request):
+def privacy_page(request: Request):
     return templates.TemplateResponse("privacy.html", {"request": request})
 
 @app.get("/admin_forgotPass", response_class=HTMLResponse)
-async def admin_forgotPass_page(request: Request):
+def admin_forgotPass_page(request: Request):
     return templates.TemplateResponse("admin_forgotPass.html", {"request": request})
 
 @app.get("/user_dashboard", response_class=HTMLResponse)
-async def user_dashboard(request: Request):
+def user_dashboard(request: Request):
     return templates.TemplateResponse("user_dashboard.html", {"request": request})
 
 @app.get("/admin_resetPass", response_class=HTMLResponse)
-async def reset_pass(request: Request):
+def reset_pass(request: Request):
     email = request.query_params.get("email")
     return templates.TemplateResponse("admin_resetPass.html", {"request": request, "email": email})
 
