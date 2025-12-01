@@ -81,6 +81,7 @@ async def submit_registration(
     fullname: str = Form(...),
     evsu_id: str = Form(...),
     contact_number: str = Form(...),
+    role: str = Form(...),
     department: str = Form(...),
     nm: str = Form(...),
     pwd2: str = Form(...),
@@ -108,10 +109,10 @@ async def submit_registration(
 
     cursor.execute(
         """
-        INSERT INTO users (fullname, evsu_id, contact_number, department, email, password)
-        VALUES (%s, %s, %s, %s, %s, %s)
+        INSERT INTO users (fullname, evsu_id, contact_number, department, email, password, role)
+        VALUES (%s, %s, %s, %s, %s, %s, %s)
         """,
-        (fullname, evsu_id, contact_number, department, nm, hashed_pwd)
+        (fullname, evsu_id, contact_number, department, nm, hashed_pwd, role)
     )
     conn.commit()
     conn.close()
