@@ -90,3 +90,10 @@ CREATE TABLE admins (
 
 # Admin Reset Password UI
 <img width="719" height="686" alt="image" src="https://github.com/user-attachments/assets/e5918fe1-1a35-4551-b1f1-6ae93079e66d" />
+
+# User Dashboard UI
+<img width="1919" height="952" alt="image" src="https://github.com/user-attachments/assets/9a5c4785-2e0c-467c-bdd4-ee1e45c23f27" />
+
+# Payment Guide UI
+<img width="1898" height="942" alt="image" src="https://github.com/user-attachments/assets/193283b7-a57d-485e-8e95-a6288b4ab223" />
+
