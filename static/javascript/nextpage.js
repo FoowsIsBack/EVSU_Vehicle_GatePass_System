@@ -17,3 +17,7 @@ function admin_login(){
 function admin_register(){
     window.location.href = 'admin_register';
 }
+
+function gcash_pay(){
+    window.location.href = 'gcash_pay';
+}

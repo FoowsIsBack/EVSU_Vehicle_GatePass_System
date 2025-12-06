@@ -1,14 +1,18 @@
 from fastapi import FastAPI, Request, Form
 from fastapi.responses import HTMLResponse, RedirectResponse
+from starlette.middleware.sessions import SessionMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 import mysql.connector
 import bcrypt
+import os
 
 app = FastAPI()
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
+
+app.add_middleware(SessionMiddleware, secret_key="f7a8c2b6d8e3f5a1b9c2d4e6f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7")
 
 def get_db_connection():
     return mysql.connector.connect(
@@ -74,6 +78,11 @@ def user_dashboard(request: Request):
 def reset_pass(request: Request):
     email = request.query_params.get("email")
     return templates.TemplateResponse("admin_resetPass.html", {"request": request, "email": email})
+
+@app.get("/gcash_pay", response_class=HTMLResponse)
+def reset_pass(request: Request):
+    email = request.query_params.get("email")
+    return templates.TemplateResponse("payment_instructions.html", {"request": request, "email": email})
 
 @app.post("/submit")
 async def submit_registration(
@@ -191,13 +200,8 @@ async def admin_register_submit(
 
     return RedirectResponse(url="/admin_portal", status_code=303)
 
-
 @app.post("/login_auth")
-async def login_auth(
-    request: Request,
-    nm: str = Form(...),
-    pwd: str = Form(...),
-):
+async def login_auth(request: Request, nm: str = Form(...), pwd: str = Form(...)):
     conn = get_db_connection()
     cursor = conn.cursor(dictionary=True)
     cursor.execute("SELECT * FROM users WHERE email = %s", (nm,))
@@ -216,8 +220,30 @@ async def login_auth(
             {"request": request, "error": "Incorrect password."}
         )
 
+    # ✅ Save user email (or name) in session
+    request.session["user_email"] = user["email"]  # or user["name"]
+
+    # Redirect to dashboard
     return RedirectResponse(url="/user_dashboard", status_code=303)
 
+
+@app.get("/user_dashboard")
+async def user_dashboard(request: Request):
+    user_email = request.session.get("user_email")
+    if not user_email:
+        # Not logged in → redirect to login page
+        return RedirectResponse(url="/login")
+
+    # Pass user to template
+    return templates.TemplateResponse(
+        "user_dashboard.html",
+        {"request": request, "user": user_email}
+    )
+
+@app.get("/logout")
+async def logout(request: Request):
+    request.session.clear()
+    return RedirectResponse(url="/login")
 
 @app.post("/admin_login_auth")
 async def admin_login_auth(
@@ -278,7 +304,6 @@ async def forgot_auth(request: Request, nm: str = Form(...)):
             "admin_forgotPass.html",
             {"request": request, "error": "Email not found. Please try again."}
         )
-
 
 @app.get("/reset_pass", response_class=HTMLResponse)
 async def reset_pass(request: Request):

@@ -17,15 +17,164 @@
                 <p class="discription">User Dashboard</p>
                 
                 <div class="right">
-                    <p class="welcome">Welcome, Dave</p>
-                    <a href=""><img src="/static/Icons/logout.png"></a>
+                    <p class="welcome">Welcome, {{ user }} </p>
+                    <a href="/"><img src="/static/Icons/logout.png"></a>
                 </div>
-
             </div>
         </div>
+
+        <div class="main2">
+            <div class="listing">
+                <button id="btn1" class="nav_btn1 active" onclick="togglePanel()">Apply For Sticker</button>
+                <button id="btn2" onclick="toggleTracker()">Status Tracker</button>
+                <button id="btn3" onclick="togglePayment()">Payment Guide</button>
+            </div>
+        </div>
+
+        <div class="apply" id="panel">
+            <div class="status">
+                <h3>Apply for Paking System</h3>
+                <div class="fillup">
+                    <div class="test1">
+                        <div class="form_group">
+                            <label>Full Name</label>
+                            <input type="text" value="" />
+                        </div>
+                        <div class="form_group">
+                            <label>EVSU ID Number</label>
+                            <input type="text" value="" />
+                        </div>
+                    </div>
+
+                    <div class="test1">
+                        <div class="form_group">
+                        <label>Department</label>
+                            <select name="user_department" required>
+                                <option value="" disabled selected hidden>Select your department</option>
+                                <option value="BPED">Bachelor of Physical Education (BPEd)</option>
+                                <option value="BSIT">Bachelor of Science in Information Technology (BSIT)</option>
+                                <option value="BSED_Science">Major in Science (BSEd)</option>
+                                <option value="BSED_Math">Major in Mathematics (BSEd)</option>
+                                <option value="BTVTED">Bachelor of Technical-Vocational Teacher Education (BTVTEd)</option>
+                                <option value="BEED">Bachelor in Elementary Education (BEED)</option>
+                                <option value="Electronics">Electronics Technology (ELX)</option>
+                                <option value="CULINARY Arts">Association of Culinary Arts Major (CA)</option>
+                                <option value="BSHM">Bachelor of Science in Hospitality Management (BSHM)</option>
+                            </select>
+                        </div>
+                        <div class="form_group">
+                            <label for="contact_num">Contact Number</label>
+                            <input type="tel" name="Contact" id="contact_number" required>
+                        </div>
+                        <h3>Vehicle Information:</h3>
+                        <br>
+                        <div class="form_group">
+                            <label for="vehicle_type">Vehicle Type</label>
+                            <select name="vehicle_list" required>
+                                <option value="CAR">Car</option>
+                                <option value="MOTOR">Motorcycle</option>
+                                <option value="VAN">Van</option>
+                                <option value="TRUCK">Truck</option>
+                            </select>
+                        </div>
+                        <div class="form_group">
+                            <label for="vehicle_model">Vehicle Model</label>
+                            <input type="text" placeholder="Ex. Toyota Vios 2020" required>
+                        </div>
+                        <div class="form_group">
+                            <label for="plate_num">Plate Number</label>
+                            <input type="text" placeholder="ABC 1234" required>
+                        </div>
+                        <div class="form_group">
+                            <label for="vehicle_color">Vehicle Color</label>
+                            <input type="text" placeholder="White" required>
+                        </div>
+                        <div class="test1">
+                            <div class="form_group">
+                                <label for="driver_license">Driver's License Number</label>
+                                <input class="driver_input" type="text" placeholder="Ex. N01-12-12345678" required>
+                            </div>
+                        </div>
+                        <br>
+                        <h3>Required Documents:</h3>
+                        <br>
+                        <div class="form_group">
+                            <label for="cr_or">Upload OR/CR(Optional)</label>
+                            <input type="file" name="or/cr" required>
+                        </div>
+                        <div class="form_group">
+                            <label for="gcash_ss">Upload GCash Payment Screenshot</label>
+                            <input type="file" name="gcash_pay" required>
+                        </div>
+                        <div class="form_group">
+                            <label for="gcash_ref">Gcash Reference Number</label>
+                            <input type="tel" placeholder="Ex. 12345678999" required>
+                        </div>
+                        <br>
+                        <div class="test1">
+                            <div class="form_group">
+                                <label for="remarks">Remarks / Additional Notes</label>
+                                <input class="remarks" type="text" placeholder="Any Additional Information" required>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form_group">
+                            <button class="pass">Submit Application</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="tracker_guide" id="tracker">
+            <div class="status">
+                <h3>Application Status Tracker</h3>
+                <div class="result">
+                    <table>
+                        <ul>
+                            <tr>
+                                <th>Application ID</th>
+                                <th>Vehicle Type</th>
+                                <th>Plate Number</th>
+                                <th>Payment Status</th>
+                                <th>Approval Status</th>
+                                <th>Actions</th>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                            </tr>
+                        </ul>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="payment_guide" id="payment">
+            <div class="status">
+                <h3>GCash Payment Guide</h3>
+                <div class="tips">
+                    <button onclick="gcash_pay()">View Full Payment Instructions</button>
+                    <div class="notice">
+                        <h4>Quick Payment Info:</h4>
+                        <ul>
+                            <li>Amount: ₱100.00</li>
+                            <li>GCash Number: 0912-345-6789</li>
+                            <li>GCash Name: EVSU-Ormoc Campus</li>
+                            <li>Include your Application ID in the message</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 
+    <script src="/static/javascript/user_dashboard.js"></script>
+    <script src="/static/javascript/nextpage.js"></script>
 
 </body>
 </html>
