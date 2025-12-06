@@ -220,10 +220,8 @@ async def login_auth(request: Request, nm: str = Form(...), pwd: str = Form(...)
             {"request": request, "error": "Incorrect password."}
         )
 
-    # ✅ Save user email (or name) in session
     request.session["user_email"] = user["email"]  # or user["name"]
 
-    # Redirect to dashboard
     return RedirectResponse(url="/user_dashboard", status_code=303)
 
 
@@ -231,10 +229,8 @@ async def login_auth(request: Request, nm: str = Form(...), pwd: str = Form(...)
 async def user_dashboard(request: Request):
     user_email = request.session.get("user_email")
     if not user_email:
-        # Not logged in → redirect to login page
         return RedirectResponse(url="/login")
 
-    # Pass user to template
     return templates.TemplateResponse(
         "user_dashboard.html",
         {"request": request, "user": user_email}
