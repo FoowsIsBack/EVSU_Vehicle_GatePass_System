@@ -54,7 +54,7 @@ CREATE TABLE admins (
 <img width="1619" height="832" alt="image" src="https://github.com/user-attachments/assets/7b02f55c-264c-47ed-9b66-a52f21c71ba4" />
 
 # User Register UI
-<img width="516" height="806" alt="image" src="https://github.com/user-attachments/assets/ba7e4c81-8d97-4ccf-a75b-3ff628e97334" />
+<img width="478" height="826" alt="image" src="https://github.com/user-attachments/assets/08d4ce40-9d3b-4d42-943d-b120609b48ae" />
 
 > [!NOTE]
 > **Note: I added a scrollbar because the form content is too long to fit on the screen.**
